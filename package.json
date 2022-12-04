@@ -1,0 +1,32 @@
+{
+  "name": "clean_blog",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Clean Blog App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mustafahincal/clean-blog.git"
+  },
+  "keywords": [
+    "blog",
+    "clean",
+    "information"
+  ],
+  "author": "Mustafa Hıncal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mustafahincal/clean-blog/issues"
+  },
+  "homepage": "https://github.com/mustafahincal/clean-blog#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
