@@ -2,13 +2,21 @@ import express from "express";
 
 const app = express();
 
+app.set("view engine", "ejs");
+
+app.use(express.static("public"));
+
 app.get("/", (req, res) => {
-  const message = {
-    id: 1,
-    name: "Mustafa",
-    age: 20,
-  };
-  res.send(message);
+  res.render("index");
+});
+app.get("/about", (req, res) => {
+  res.render("about");
+});
+app.get("/post", (req, res) => {
+  res.render("post");
+});
+app.get("/addpost", (req, res) => {
+  res.render("add_post");
 });
 
 const port = 3000;
