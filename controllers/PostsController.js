@@ -1,9 +1,19 @@
 import Post from "../models/Post.js";
 
 export const getPosts = async (req, res) => {
-  const posts = await Post.find();
-  res.render("index", {
+  const page = req.query.page || 1;
+  const postsPerPage = 2;
+  const postsCount = await Post.find().countDocuments();
+
+  const posts = await Post.find()
+    .sort("-dateCreated")
+    .skip((page - 1) * postsPerPage)
+    .limit(postsPerPage);
+
+  res.render("posts", {
     posts,
+    currentPage: page,
+    pages: Math.ceil(postsCount / postsPerPage),
   });
 };
 

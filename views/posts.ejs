@@ -35,9 +35,17 @@
           </div>
           <hr>
           <% } %>
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-        </div>
+          <% if(pages > 0) { %>
+            <ul class="nav tm-paging-links">
+              <% for(i = 1; i <= pages ;i++) { %>
+                <% if(i == currentPage){ %>
+                    <li class="nav-item"> <a href="/?page=<%= i %>" class="nav-link tm-paging-link active">  <%= i %> </a> </li>
+                <% } else { %>
+                    <li class="nav-item"> <a href="/?page=<%= i %>" class="nav-link tm-paging-link">  <%= i %> </a> </li>
+                <% } %>
+              <% } %>
+            </ul>
+          <% } %>
       </div>
     </div>
   </div>
