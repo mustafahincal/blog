@@ -3,5 +3,5 @@ export const getAboutPage = (req, res) => {
 };
 
 export const getAddPostPage = (req, res) => {
-  res.render("add_post");
+  res.render("add_post"); 
 };
