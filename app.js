@@ -43,6 +43,7 @@ app.get("/posts/edit/:id", getUpdatePostPage);
 app.put("/posts/:id", updatePost);
 app.delete("/posts/:id", deletePost);
 
+
 const port = 3000;
 app.listen(port, () => {
   console.log(`server is started at ${port}`);
